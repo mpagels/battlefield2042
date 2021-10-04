@@ -14,6 +14,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   font-family: MyFont2;
+  background-color: black;;
 }
 
 @font-face {
