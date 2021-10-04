@@ -25,7 +25,7 @@ export default function Requirements({ children }) {
         <List>{isMinimum ? <Minimum /> : <Recommended />}</List>
       </ListBackground>
       <Info>
-        Click the <span>GPU</span> for comparision site.
+        Click the <span>GPU</span> for comparison site.
       </Info>
     </Wrapper>
   );
