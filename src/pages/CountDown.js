@@ -59,4 +59,5 @@ export default function CountDown({ children }) {
 
 const Wrapper = styled.main`
   height: 100%;
+  margin-bottom: 90px;
 `;

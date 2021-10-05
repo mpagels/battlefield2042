@@ -33,6 +33,7 @@ export default function Requirements({ children }) {
 
 const Wrapper = styled.main`
   height: 100%;
+  margin-bottom: 90px;
 `;
 
 const ListBackground = styled.div`
