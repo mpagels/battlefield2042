@@ -15,6 +15,7 @@ body {
   background-position: center;
   font-family: MyFont2;
   background-color: black;;
+  background-size: cover;
 }
 
 @font-face {
