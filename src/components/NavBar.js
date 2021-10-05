@@ -1,28 +1,41 @@
 import React from "react";
 import styled from "styled-components";
 import { AiFillClockCircle } from "react-icons/ai";
-import { GiComputerFan } from "react-icons/gi";
+import { GiComputerFan, GiSwissArmyKnife } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import { NavLink, useLocation } from "react-router-dom";
 
 export default function NavBar() {
   const location = useLocation();
-  const isRoot = location.pathname === "/";
+  const path = location.pathname;
 
   return (
     <Wrapper>
       <Link exact to="/">
         <IconContext.Provider
-          value={{ color: isRoot ? "black" : "#26ffdf", size: "3em" }}
+          value={{ color: path === "/" ? "black" : "#26ffdf", size: "3em" }}
         >
           <AiFillClockCircle />
         </IconContext.Provider>
       </Link>
       <Link to="/requirements">
         <IconContext.Provider
-          value={{ color: isRoot ? "#26ffdf" : "black", size: "3em" }}
+          value={{
+            color: path === "/requirements" ? "black" : "#26ffdf",
+            size: "3em",
+          }}
         >
           <GiComputerFan />
+        </IconContext.Provider>
+      </Link>
+      <Link to="/intel">
+        <IconContext.Provider
+          value={{
+            color: path === "/intel" ? "black" : "#26ffdf",
+            size: "3em",
+          }}
+        >
+          <GiSwissArmyKnife />
         </IconContext.Provider>
       </Link>
     </Wrapper>
@@ -34,7 +47,8 @@ const Wrapper = styled.div`
   bottom: 0;
   right: 0;
   width: 100vw;
-  display: flex; ;
+  display: flex;
+  background-color: black;
 `;
 
 const Link = styled(NavLink)`

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import CountDown from "./pages/CountDown";
 import { Route, Switch } from "react-router-dom";
 import Requirements from "./pages/Requirements";
+import Intel from "./pages/Intel";
 
 export default function App() {
   return (
@@ -14,6 +15,11 @@ export default function App() {
           <Requirements>
             <h2 className="Header">PC Requirements</h2>
           </Requirements>
+        </Route>
+        <Route path="/intel">
+          <Intel>
+            <h2 className="Header">Intel</h2>
+          </Intel>
         </Route>
         <Route exact path="/">
           <CountDown>
